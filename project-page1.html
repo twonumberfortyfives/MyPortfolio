@@ -7,6 +7,30 @@
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
+    <script>
+        var tag = document.createElement('script');
+        tag.src = 'https://www.youtube.com/iframe_api';
+        var firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+        var player;
+        function onYouTubeIframeAPIReady() {
+            player = new YT.Player('player', {
+                height: '315',
+                width: '560',
+                videoId: 'EEJw2ma_c6Y', // ВАШ_ID_ВИДЕО
+                events: {
+                    'onReady': onPlayerReady
+                }
+            });
+        }
+
+        function onPlayerReady(event) {
+            event.target.playVideo();
+        }
+    </script>
+
+    
     <nav class="nav">
         <div class="container">
             <div class="nav-row">
@@ -37,7 +61,7 @@
             <div class="project-details">
                 
                 <h1 class="title-1">Symphony of blocks</h1>
-                <div class="video-container">
+                <div class="video-container", id = "player">
                     <iframe width="560" height="315" src="https://youtu.be/EEJw2ma_c6Y?si=ujwH-_JXcZWnElot" frameborder="0" allowfullscreen></iframe>
                 </div>
             
