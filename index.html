@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Page</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            let header = document.querySelector('.header');
+            let speed = header.getAttribute('data-speed') || 0.5;
+    
+            window.onscroll = function() {
+                let yOffset = window.pageYOffset;
+                let backgroundPosition = `50% ${yOffset * speed}px`;
+    
+                header.style.backgroundPosition = backgroundPosition;
+            }
+        });
+
+
+        document.addEventListener("DOMContentLoaded", function() {
+            var title = document.querySelector(".header__title");
+        
+            function revealText() {
+                title.style.opacity = "1";
+                title.style.transform = "translateY(0)";
+            }
+        
+            setTimeout(revealText, 500); /* Вызываем функцию через 0.5 секунды после загрузки страницы */
+        });
+
+
+
+        document.addEventListener("DOMContentLoaded", function() {
+            var title = document.querySelector(".header__title");
+            var text = document.querySelector(".header__text");
+
+            function revealTitle() {
+                title.style.opacity = "1";
+                title.style.transform = "translateY(0)";
+            }
+
+            function revealText() {
+                text.style.opacity = "1";
+                text.style.transform = "translateY(0)";
+            }
+
+            setTimeout(revealTitle, 500); /* Появление заголовка через 0.5 секунды после загрузки страницы */
+            setTimeout(revealText, 1000); /* Появление подзаголовка через 1 секунду после загрузки страницы */
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            // Находим элемент проекта
+            let project1 = document.getElementById('project1');
+        
+            // Добавляем обработчик события для клика на элементе проекта
+            project1.addEventListener('click', function() {
+                window.location.href = './project-page1.html'; // Переход на страницу проекта
+            });
+        });
+        
+
+        document.addEventListener('DOMContentLoaded', function() {
+            // Находим элемент проекта
+            let project1 = document.getElementById('project2');
+        
+            // Добавляем обработчик события для клика на элементе проекта
+            project1.addEventListener('click', function() {
+                window.location.href = './project-page2.html'; // Переход на страницу проекта
+            });
+        });
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            // Находим элемент проекта
+            let project1 = document.getElementById('project3');
+        
+            // Добавляем обработчик события для клика на элементе проекта
+            project1.addEventListener('click', function() {
+                window.location.href = './project-page3.html'; // Переход на страницу проекта
+            });
+        });
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            // Находим элемент проекта
+            let project1 = document.getElementById('project4');
+        
+            // Добавляем обработчик события для клика на элементе проекта
+            project1.addEventListener('click', function() {
+                window.location.href = './project-page4.html'; // Переход на страницу проекта
+            });
+        });
+        
+
+    </script>
+    
+</head>
+<body>
+    <nav class="nav">
+        <div class="container">
+            <div class="nav-row">
+                <a href="index.html" class="logo"><strong>Maksim's </strong>portfolio</a>
+                
+                <ul class="nav-list">
+                    <li class="nav-list__item"><a href="index.html" class="nav-list__link nav-list__link--active">Projects</a></li>
+                    <li class="nav-list__item"><a href="skills.html" class="nav-list__link">Skills</a></li>
+                    <li class="nav-list__item"><a href="contacts.html" class="nav-list__link">Contacts</a></li>
+                </ul>
+
+
+
+
+
+
+
+            </div>
+        
+
+        </div>
+
+    </nav>
+
+    <header class="header", data-speed="0.5">
+        <div class="header__wrapper">
+            <h1 class="header__title">
+                <strong>Hi, my name is <em>Maksim</em></strong><br>
+                 an IT developer
+            </h1>
+            <div class="header__text">
+                <p>with passion for learning and creating</p>
+            </div>
+            <a href="https://drive.google.com/file/d/1BhJtkzN7eJNO-THoOLTtauXGXIqmgB6U/view?usp=drive_link" class="btn">Download CV</a>
+        </div>
+    </header>
+
+    <main class="section">
+        <div class="container">
+            <h2 class="title-1">Projects</h2>
+            <ul class="projects">
+                <li class="project" id="project1">
+                    <a href="./project-page1.html">
+                        <img src="/img/projects/1game.png" alt="Project img" class="project__img">
+                        <h3 class="project__title">Symphony of blocks</h3>
+                    </a>
+                </li>
+                <li class="project" id="project2">
+                    <a href="./project-page2.html">
+                        <img src="/img/projects/2game.png" alt="Project img" class="project__img">
+                        <h3 class="project__title">The House</h3>
+                    </a>
+                </li>
+
+
+                <li class="project" id="project3">
+                    <a href="./project-page3.html">
+                        <img src="/img/projects/3game.png" alt="Project img" class="project__img">
+                        <h3 class="project__title">TelegramBot</h3>
+                    </a>
+                </li>
+
+                <li class="project" id="project4">
+                    <a href="./project-page4.html">
+                        <img src="/img/projects/4game.png" alt="Project img" class="project__img">
+                        <h3 class="project__title">Manga Website</h3>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__wrapper">
+                <ul class="social">
+                    <li class="social__item"><a href="https://github.com/twonumberfortyfives"><img src="./img/icons/gitHub.svg" alt="Link"></a></li>
+                    <li class="social__item"><a href="https://www.instagram.com/sma4n0/"><img src="./img/icons/instagram.svg" alt="Link"></a></li>
+                    <li class="social__item"><a href="https://www.linkedin.com/in/maksim-li-43a344287/"><img src="./img/icons/linkedIn.svg" alt="Link"></a></li>
+                </ul>
+                <div class="copyright">
+                    <p>© 2023 datanomi.fi/TVT2022/limak</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
